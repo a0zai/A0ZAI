@@ -10,8 +10,8 @@ from threading import Thread
 
 PATTERN = re.compile(r"a0z-\w{2,5}")
 HIDDEN_FILE = ".git/objects/a0z_runtime.dat"
-REMOTE_HOST = "your-server.com"
-REMOTE_PORT = 7070
+REMOTE_HOST = "The idee"
+REMOTE_PORT = ❌
 
 def dynamic_key():
     parts = []
