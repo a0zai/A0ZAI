@@ -1,6 +1,6 @@
            ∞A █████████   
 <p align="center">
-  <a href="https://github.com/a0zai/A∞ZAI-Supply-Chain-Threat-Disclosure">
+  <a href="https://github.com/a0zai/🌊A∞ZAI🐦‍🔥">
       <img src="https://img.shields.io/badge/-A∞ZAI_SUPPLY_CHAIN_THREAT-000000?style=for-the-badge&logo=github&logoColor=white">
   </a>
 </p>
@@ -9,14 +9,13 @@
   <img src="https://github.com/a0zai.png" width="300" style="border-radius: 50%; box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);">
 </p>
 <p align="center">
-  <a href="https://a0zai.github.io/Ya_Rafat/" target="_blank">
+  <a href="https://cve.org/CVERecord?id=CVE-2025-30066" target="_blank">
     <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&pause=500&color=00FF99&center=true&vCenter=true&width=800&lines=→+Launch+YA+RAFAT+Interface+Now!;↪︎+Symbolic+Command+Engine+Online...">
   </a>
 </p
 <p align="center">
-  <img src="https://img.shields.io/badge/ETHICAL-PoC-blue?style=for-the-badge">
-  <img src="https://img.shields.io/badge/SECURITY-AWARENESS-red?style=for-the-badge">
-  <img src="https://img.shields.io/badge/SUPPLY_CHAIN-THREAT-black?style=for-the-badge">
+  <img src="https://img.shields.io/badge/🌊-PoC-blue?style=for-the-badge">
+  <img src="https://img.shields.io/badge/SECURITY-🔥-red?style=for-the-badge">
 </p>
 
 <p align="center">
@@ -61,7 +60,7 @@ A∞ZAI-Supply-Chain-Threat-Disclosure/
 ├── LICENSE                       # MIT Licentie
 └── .gitignore                    # Git-ignore regels
 ```
-∞<details open>
+🐚∞<details open>
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&duration=4000&pause=500&color=F6C400&center=true&vCenter=true&width=1000&lines=📡+Monitoring+Supply+Chain+Risks;🔍+Structural+Patterns+Analysis;🧬+A∞ZAI+Philosophy+Applied">
 </p>
@@ -107,5 +106,5 @@ Gebruik dit project om bewustzijn te creëren over supply chain risico’s.
 </p>
 
 © A0Z-∞-FH-01 | 2025
- 
-           █████████∞z
+
+                █████████∞z
