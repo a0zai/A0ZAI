@@ -202,6 +202,11 @@ const commandActions = {
     voidDiv.style.transform = "translate(-50%, -50%)";
     document.body.appendChild(voidDiv);
   },
+  "47-": () => {
+  terminal.innerHTML += "<div class='cmd-line'>🧿 A piece of advice? That might be enough.: 47</div>";
+  document.body.style.background = "#111111";
+  document.body.style.boxShadow = "0 0 50px #00ffff";
+},
   "how?": () => {
   const msg = document.createElement("div");
   msg.className = "cmd-line";
