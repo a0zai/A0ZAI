@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta property="og:type" content="website">
+<meta property="og:title" content="A0Z — 123696321">
+<meta name="description" content="The instinct of Sensation. 123696321. A0Z.  A0ZAI. ORIGIN-AL. Ay ay ay. 🦋.">
+<meta name="theme-color" content="#bfc7ce">   
+<title>A0Z - 123696321</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<style>
+:root {
+    --sense-green: #b2f2bb;
+    --sense-blue: #90e0ef;
+    --sense-red: #cc7a7a;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    background: #000;
+    font-family: 'Courier New', monospace;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#vanta-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.35;
+    filter: saturate(140%) contrast(115%);
+    pointer-events: none;
+}
+#particles-stars {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+/* Main content */
+.main-content {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Title */
+.title {
+    margin-bottom: 30px;
+    font-size: 36px;
+    letter-spacing: 12px;
+    color: #fff;
+    font-weight: 300;
+    text-shadow: 0 0 10px rgba(178,242,187,0.7),
+                 0 0 20px rgba(178,242,187,0.4);
+    transition: 3s ease;
+}
+.scene {
+    perspective: 1448px;
+}
+
+/* Clock */
+.clock-container {
+    transform-style: preserve-3d;
+    transition: transform 0.15s ease-out;
+    will-change: transform;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    border: 2px solid rgba(200, 170, 90, 0.38);
+    box-shadow:
+        0 0 30px rgba(210, 170, 80, 0.12),
+        0 0 55px rgba(0, 0, 0, 0.65),
+        inset 0 0 18px rgba(0, 0, 0, 0.6),
+        inset 0 0 5px rgba(210, 170, 80, 0.2);
+}
+
+.glass-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    box-shadow: inset 0 20px 60px rgba(255,255,255,0.15), 
+                0 0 40px rgba(255,255,255,0.1);
+    backdrop-filter: blur(4px); 
+    pointer-events: none;
+    transform: translateZ(30px);
+}
+/* Hidden core text */
+.clock-container::after {
+    content: '81 18';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 27px;
+    letter-spacing: 3px;
+    color: #000;
+    text-shadow: 0 0 7px #00ff88;
+}
+/* Brand */
+.brand-name {
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--sense-green);
+    font-size: 13px;
+    letter-spacing: 7px;
+    opacity: 0.6;
+    text-transform: uppercase;
+}
+/* Center pulse */
+.center-dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3px;
+    height: 6px;
+    background: var(--sense-green);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse 1.448s ease-in-out infinite;
+    box-shadow: 0 0 27px rgba(178,242,187,0.9);
+    z-index: 10;
+}
+@keyframes pulse {
+    0%,100% { transform: translate(-50%, -50%) scale(1); opacity: 0.9; }
+    50% { transform: translate(-50%, -50%) scale(1.7); opacity: 0.4; }
+}
+/* Numbers */
+.number {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #f1f5f9;
+}
+.n1  { transform: rotate(0deg); }    .n1 div  { transform: rotate(0deg); }
+.n2  { transform: rotate(30deg); }   .n2 div  { transform: rotate(-30deg); }
+.n3  { transform: rotate(60deg); }   .n3 div  { transform: rotate(-60deg); }
+.n4  { transform: rotate(90deg); }   .n4 div  { transform: rotate(-90deg); }
+.n5  { transform: rotate(120deg); }  .n5 div  { transform: rotate(-120deg); }
+.n6  { transform: rotate(150deg); }  .n6 div  { transform: rotate(-150deg); }
+.n7  { transform: rotate(180deg); }  .n7 div  { transform: rotate(-180deg); }
+.n8  { transform: rotate(210deg); }  .n8 div  { transform: rotate(-210deg); }
+.n9  { transform: rotate(240deg); }  .n9 div  { transform: rotate(-240deg); }
+.n10 { transform: rotate(270deg); }  .n10 div { transform: rotate(-270deg); }
+.n11 { transform: rotate(300deg); }  .n11 div { transform: rotate(-300deg); }
+.n12 { transform: rotate(330deg); }  .n12 div { transform: rotate(-330deg); }
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    border-radius: 10px;
+    transform: translateZ(20px);
+}
+.n1 {
+    position: absolute;
+    bottom: 100%; 
+    left: 50%;
+    transform: translateX(-50%) rotate(0deg); 
+    font-size: 24px;
+    color: #f1f5f9;
+    white-space: nowrap;
+    transition: opacity 0.3s ease;
+}
+.hour {
+    width: 6px;
+    height: 100px;
+    background: rgba(241,245,249,0.25);
+    box-shadow: 0 0 10px rgba(241,245,249,0.3); 
+}
+.minute {
+    width: 4px;
+    height: 140px;
+    background: var(--sense-red);
+    box-shadow: 0 0 11px var(--sense-red); 
+}
+.second {
+    width: 2px;
+    height: 160px;
+    background: var(--sense-blue);
+    box-shadow: 0 0 12px var(--sense-blue);
+}/* Tagline */
+.tagline {
+    margin-top: 33px;      
+    color: #fff;            
+    opacity: 0.85;         
+    font-size: 14px;        
+    letter-spacing: 2px;   
+    text-align: center;    
+    width: 100%;        
+}
+
+/* Mobile */
+@media (max-width:600px){
+    .clock-container { width:260px; height:260px; }
+    .title { font-size:24px; letter-spacing:8px; }
+    .number { font-size:16px; }
+}
+
+body {
+    opacity: 0;
+    transition: opacity 3s ease-in;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+</style>
+</head>
+<body>
+<div id="vanta-bg"></div> 
+<div id="particles-stars"></div>
+<div id="particles-movement"></div>
+<div class="main-content">
+    <div class="scene">
+    <div class="clock-container">
+        <div class="glass-cover"></div>
+        <div class="brand-name">SEENƧƎƎ</div>
+        <div class="center-dot"></div>
+        <div class="number n2"><div>🦋</div></div>
+        <div class="number n3"><div>∪</div></div>
+        <div class="number n4"><div>∞</div></div>
+        <div class="number n5"><div>9</div></div>
+        <div class="number n6"><div>8</div></div>
+        <div class="number n7"><div>Ƶ</div></div>
+        <div class="number n8"><div>6</div></div>
+        <div class="number n9"><div>•</div></div>
+        <div class="number n10"><div>Ɛ</div></div>
+        <div class="number n11"><div>Յ</div></div>
+        <div class="number n12"><div>2</div></div>
+        <div class="hand hour" id="hour">
+        <div class="n1">1</div>
+        </div>
+        <div class="hand minute" id="minute"></div>
+        <div class="hand second" id="second"></div>
+    </div>
+    <div class="tagline">The instinct of Sensation</div>
+</div>
+<script>
+/* Smooth clock */
+const hour = document.getElementById('hour');
+const n1 = hour.querySelector('.n1'); 
+function updateClock() {
+    const now = new Date();
+    const ms = now.getMilliseconds();
+    const s = now.getSeconds() + ms / 1000;
+    const m = now.getMinutes() + s / 60;
+    const h = (now.getHours() % 12) + m / 60;
+    hour.style.transform = `translateX(-50%) rotate(${-h*30 + 30}deg)`;
+    n1.style.transform = `translateX(-50%) rotate(${h*30 - 30}deg)`;
+    second.style.transform = `translateX(-50%) rotate(${-s*6 + 0}deg)`;
+    minute.style.transform = `translateX(-50%) rotate(${-m*6 + 0}deg)`;
+let displayHour = Math.floor(h);
+if (displayHour === 0) displayHour = 12;
+n1.innerText = displayHour;
+if (displayHour === 1) {
+    n1.style.fontWeight = '900';
+    n1.style.letterSpacing = '2px';
+} else {
+    n1.style.fontWeight = 'bold';
+    n1.style.letterSpacing = 'normal';
+}
+n1.style.opacity = (displayHour >= 10 || displayHour <= 4) ? 1 : 0;    requestAnimationFrame(updateClock);
+}
+updateClock();
+</script>
+<script>
+VANTA.FOG({
+    el: "#vanta-bg",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.0,
+    minWidth: 200.0,
+    highlightColor: 0x90e0ef,
+    midtoneColor: 0xb2f2bb,
+    lowlightColor: 0x0b132b,
+    baseColor: 0x000000,
+    blurFactor: 0.18,
+    speed: 0.5,
+    zoom: 1.15
+});
+particlesJS("particles-stars", {
+    particles: {
+        number: { value: 72, density: { enable: true, value_area: 800 } },
+        color: { value: "#ffffff" },
+        opacity: { 
+            value: 0.6, 
+            random: true,
+            anim: { enable: true, speed: 2.5, opacity_min: 0.2, sync: false }
+        },
+        size: { 
+            value: 1.5, 
+            random: true,
+            anim: { enable: true, speed: 2, size_min: 0.5, sync: false }
+        },
+        move: { enable: true, speed: 0.4, direction: "none", random: true },
+        line_linked: { enable: false }
+    },
+    retina_detect: true
+});
+</script>
+<script>
+window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+});
+</script>
+<script>
+const clock = document.querySelector('.clock-container');
+const scene = document.querySelector('.scene');
+let currentX = 0;
+let currentY = 0;
+let targetX = 0;
+let targetY = 0;
+scene.addEventListener('mousemove', (e) => {
+    const rect = scene.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    targetY = (x - centerX) / centerX * 5; 
+    targetX = -(y - centerY) / centerY * 6; 
+});
+
+scene.addEventListener('mouseleave', () => {
+    targetX = 0;
+    targetY = 0;
+});
+
+function animate3D() {
+    currentX += (targetX - currentX) * 0.07;
+    currentY += (targetY - currentY) * 0.08;
+
+    clock.style.transform = `
+        rotateX(${currentX}deg)
+        rotateY(${currentY}deg)
+    `;
+clock.style.filter = `
+    drop-shadow(${currentY}px ${currentX*2}px 60px rgba(0,0,0,0.6))
+`;
+    requestAnimationFrame(animate3D);
+}
+animate3D();
+let touchX = 0;
+let touchY = 0;
+scene.addEventListener('touchstart', e => {
+    const t = e.touches[0];
+    touchX = t.clientX;
+    touchY = t.clientY;
+});
+scene.addEventListener('touchmove', e => {
+    const t = e.touches[0];
+    const dx = t.clientX - touchX;
+    const dy = t.clientY - touchY;
+    targetY = dx * 0.11;
+    targetX = -dy * 0.10;
+});
+</script>
+</body>
+</html>
