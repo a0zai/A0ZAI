@@ -19,8 +19,8 @@
 <style>
 :root {
     --sense-green: #b2f2bb;
-    --sense-blue: #90e0ef;
-    --sense-red: #cc7a7a;
+    --sense-blue: #4a9bbf;
+    --sense-red: #9b5050;
 }
 html, body {
     height: 100%;
@@ -47,7 +47,7 @@ html, body {
     z-index: 0;
     pointer-events: none;
 }
-/* Main content */
+
 .main-content {
     position: relative;
     z-index: 0;
@@ -56,7 +56,7 @@ html, body {
     align-items: center;
 }
 
-/* Title */
+
 .title {
     margin-bottom: 30px;
     font-size: 36px;
@@ -70,8 +70,6 @@ html, body {
 .scene {
     perspective: 1448px;
 }
-
-/* Clock */
 .clock-container {
     transform-style: preserve-3d;
     transition: transform 0.15s ease-out;
@@ -87,7 +85,6 @@ html, body {
         inset 0 0 18px rgba(0, 0, 0, 0.6),
         inset 0 0 5px rgba(210, 170, 80, 0.2);
 }
-
 .glass-cover {
     position: absolute;
     top: 0;
@@ -102,59 +99,55 @@ html, body {
     pointer-events: none;
     transform: translateZ(30px);
 }
-/* Hidden core text */
 .clock-container::after {
     content: '81 18';
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 27px;
+    font-size: 24px;
     letter-spacing: 3px;
     color: #000;
     text-shadow: 0 0 7px #00ff88;
 }
-
 .brand-name {
     position: absolute;
     top: 63%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: var(--sense-green);
-    font-size: 13px;
+    font-size: 9px;
     letter-spacing: 7px;
     opacity: 0.6;
     text-transform: uppercase;
 }
-/* Center pulse */
 .center-dot {
     position: absolute;
     top: 50%;
     left: 50%;
     width: 3px;
-    height: 6px;
+    height: 4px;
     background: var(--sense-green);
     border-radius: 50%;
     transform: translate(-50%, -50%);
-    animation: pulse 1.448s ease-in-out infinite;
-    box-shadow: 0 0 27px rgba(178,242,187,0.9);
+    animation: pulse 2.027s ease-in-out infinite;
+    box-shadow: 0 0 14px rgba(50,100,60,0.7);
     z-index: 10;
 }
 @keyframes pulse {
     0%,100% { transform: translate(-50%, -50%) scale(1); opacity: 0.9; }
     50% { transform: translate(-50%, -50%) scale(1.7); opacity: 0.4; }
 }
-/* Numbers */
 .number {
     position: absolute;
     width: 100%;
     height: 100%;
     text-align: center;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
     padding: 20px;
     box-sizing: border-box;
-    color: #f1f5f9;
+    color: #fff;
 }
 .n1  { transform: rotate(0deg); }    .n1 div  { transform: rotate(0deg); }
 .n2  { transform: rotate(30deg); }   .n2 div  { transform: rotate(-30deg); }
@@ -181,46 +174,43 @@ html, body {
     bottom: 100%; 
     left: 50%;
     transform: translateX(-50%) rotate(0deg); 
-    font-size: 24px;
+    font-size: 22px;
     color: #f1f5f9;
     white-space: nowrap;
     transition: opacity 0.3s ease;
 }
 .hour {
-    width: 6px;
-    height: 99px;
+    width: 4px;
+    height: 39px;
     background: rgba(241,245,249,0.25);
     box-shadow: 0 0 10px rgba(241,245,249,0.3); 
 }
 .minute {
-    width: 4px;
-    height: 120px;
+    width: 3.5px;
+    height: 69px;
     background: var(--sense-red);
     box-shadow: 0 0 11px var(--sense-red); 
 }
 .second {
-    width: 2px;
-    height: 127px;
+    width: 2.5px;
+    height: 93px;
     background: var(--sense-blue);
     box-shadow: 0 0 12px var(--sense-blue);
-}/* Tagline */
+}
 .tagline {
     margin-top: 33px;      
-    color: #fff;            
+    color: #f1f5f9;            
     opacity: 0.85;         
     font-size: 14px;        
     letter-spacing: 2px;   
     text-align: center;    
     width: 100%;        
 }
-
-/* Mobile */
 @media (max-width:600px){
     .clock-container { width:260px; height:260px; }
     .title { font-size:24px; letter-spacing:8px; }
     .number { font-size:16px; }
 }
-
 body {
     opacity: 0;
     transition: opacity 3s ease-in;
@@ -259,7 +249,6 @@ body.loaded {
     <div class="tagline">The instinct of Sensation</div>
 </div>
 <script>
-/* Smooth clock */
 const hour = document.getElementById('hour');
 const n1 = hour.querySelector('.n1'); 
 function updateClock() {
@@ -299,8 +288,8 @@ VANTA.FOG({
     lowlightColor: 0x0b132b,
     baseColor: 0x000000,
     blurFactor: 0.24,
-    speed: 0.5,
-    zoom: 1.15
+    speed: 0.4,
+    zoom: 1.14
 });
 particlesJS("particles-stars", {
     particles: {
@@ -309,14 +298,14 @@ particlesJS("particles-stars", {
         opacity: { 
             value: 0.6, 
             random: true,
-            anim: { enable: true, speed: 2.5, opacity_min: 0.2, sync: false }
+            anim: { enable: true, speed: 1.2, opacity_min: 0.2, sync: false }
         },
         size: { 
             value: 1.5, 
             random: true,
             anim: { enable: true, speed: 2, size_min: 0.5, sync: false }
         },
-        move: { enable: true, speed: 0.4, direction: "none", random: true },
+        move: { enable: true, speed: 0.4, direction: "left", random: true },
         line_linked: { enable: false }
     },
     retina_detect: true
@@ -343,12 +332,10 @@ scene.addEventListener('mousemove', (e) => {
     targetY = (x - centerX) / centerX * 5; 
     targetX = -(y - centerY) / centerY * 6; 
 });
-
 scene.addEventListener('mouseleave', () => {
     targetX = 0;
     targetY = 0;
 });
-
 function animate3D() {
     currentX += (targetX - currentX) * 0.07;
     currentY += (targetY - currentY) * 0.08;
