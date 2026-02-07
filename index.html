@@ -147,7 +147,7 @@ html, body {
     font-weight: bold;
     padding: 20px;
     box-sizing: border-box;
-    color: #fff;
+    color: #cccccc;
 }
 .n1  { transform: rotate(0deg); }    .n1 div  { transform: rotate(0deg); }
 .n2  { transform: rotate(30deg); }   .n2 div  { transform: rotate(-30deg); }
@@ -181,7 +181,7 @@ html, body {
 }
 .hour {
     width: 4px;
-    height: 39px;
+    height: 54px;
     background: rgba(241,245,249,0.25);
     box-shadow: 0 0 10px rgba(241,245,249,0.3); 
 }
@@ -193,13 +193,13 @@ html, body {
 }
 .second {
     width: 2.5px;
-    height: 93px;
+    height: 78px;
     background: var(--sense-blue);
     box-shadow: 0 0 12px var(--sense-blue);
 }
 .tagline {
     margin-top: 33px;      
-    color: #f1f5f9;            
+    color: #ffffff;            
     opacity: 0.85;         
     font-size: 14px;        
     letter-spacing: 2px;   
@@ -265,7 +265,7 @@ let displayHour = Math.floor(h);
 if (displayHour === 0) displayHour = 12;
 n1.innerText = displayHour;
 if (displayHour === 1) {
-    n1.style.fontWeight = '900';
+    n1.style.fontWeight = '600';
     n1.style.letterSpacing = '2px';
 } else {
     n1.style.fontWeight = 'bold';
@@ -287,9 +287,9 @@ VANTA.FOG({
     midtoneColor: 0xb2f2bb,
     lowlightColor: 0x0b132b,
     baseColor: 0x000000,
-    blurFactor: 0.24,
+    blurFactor: 0.14,
     speed: 0.4,
-    zoom: 1.14
+    zoom: 0.9
 });
 particlesJS("particles-stars", {
     particles: {
@@ -303,9 +303,9 @@ particlesJS("particles-stars", {
         size: { 
             value: 1.5, 
             random: true,
-            anim: { enable: true, speed: 2, size_min: 0.5, sync: false }
+            anim: { enable: true, speed: 1, size_min: 0.5, sync: false }
         },
-        move: { enable: true, speed: 0.4, direction: "left", random: true },
+        move: { enable: true, speed: 0.3, direction: "left", random: true },
         line_linked: { enable: false }
     },
     retina_detect: true
