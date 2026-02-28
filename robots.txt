@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://a0z.nl/sitemap.xml
+
+# Identity: a0z.nl
+# Intent: Origin Zero Point
+# Trigger Code: A0Z
+# Root Signature: 0
