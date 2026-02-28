@@ -2,17 +2,32 @@
 <html lang="nl">
 <head>
 <meta charset="UTF-8">
-<meta property="og:type" content="website">
-<meta property="og:title" content="A0ZAI">
+ <meta property="og:type" content="website">
+<meta property="og:title" content="0">
 <meta property="og:locale" content="nl_NL">
 <meta name="robots" content="index, follow">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="The instinct of Sensation. Made on N.">
-<meta property="og:description" content="The instinct of Sensation. Made on N.">
+<meta name="description" content="0">
+<meta property="og:description" content="0 - A0Z: the instinct of sensation at the zero point of origin.">
 <meta property="og:url" content="https://a0z.nl/">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/201962374?v=4&size=800">
-<meta name="theme-color" content="#bfc7ce">   
-<title>A0ZAI</title>
+<meta name="theme-color" content="#eaeaea">  
+<title>0</title>
+<link rel="icon" type="image/png" href="0.PNG">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VisualBusiness",
+  "name": "0",
+  "alternateName": ["A0Z", "Zero", "Origin"],
+  "url": "https://a0z.nl/",
+  "logo": "https://a0z.nl/0.PNG",
+  "description": "0 is the point of origin. The instinct of sensation created by A0Z.",
+  "sameAs": [
+    "https://github.com/a0zai"
+  ]
+}
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
@@ -55,7 +70,17 @@ html, body {
     flex-direction: column;
     align-items: center;
 }
-
+.top-logo {
+    position: absolute;
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%) translateZ(60px);
+    max-width: 80px;
+    height: auto;
+    z-index: 100;
+    pointer-events: none;
+    filter: drop-shadow(0 0 15px rgba(255,255,255,0.3));
+}
 
 .title {
     margin-bottom: 30px;
@@ -89,15 +114,11 @@ html, body {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background: rgba(255,255,255,0.08);
-    box-shadow: inset 0 20px 60px rgba(255,255,255,0.15), 
-                0 0 40px rgba(255,255,255,0.1);
-    backdrop-filter: blur(4px); 
     pointer-events: none;
     transform: translateZ(30px);
 }
 .clock-container::after {
-    content: '81 18';
+    content: 'A•Z';
     position: absolute;
     top: 50%;
     left: 50%;
@@ -118,19 +139,7 @@ html, body {
     opacity: 0.6;
     text-transform: uppercase;
 }
-.center-dot {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 3px;
-    height: 4px;
-    background: var(--sense-green);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    animation: pulse 2.027s ease-in-out infinite;
-    box-shadow: 0 0 14px rgba(50,100,60,0.7);
-    z-index: 10;
-}
+
 @keyframes pulse {
     0%,100% { transform: translate(-50%, -50%) scale(1); opacity: 0.9; }
     50% { transform: translate(-50%, -50%) scale(1.7); opacity: 0.4; }
@@ -215,38 +224,57 @@ body {
 body.loaded {
     opacity: 1;
 }
+.signature {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: var(--sense-green);
+    opacity: 1 !important;
+    z-index: 9999;
+    pointer-events: none; 
+    text-transform: uppercase;
+}
 </style>
 </head>
 <body>
+    <h1 style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;">
+  0: The Zero Point of Origin and Instinct of Sensation
+</h1>
 <div id="vanta-bg"></div> 
 <div id="particles-stars"></div>
 <div class="main-content">
-    <div class="scene">
+  <img src="0.PNG" alt="A0Z Zero Point Logo" class="top-logo"> 
+  <div class="scene">
     <div class="clock-container">
         <div class="glass-cover"></div>
-        <div class="brand-name">SEENƧƎƎ</div>
-        <div class="center-dot"></div>
-        <div class="number n2"><div>)(</div></div>
-        <div class="number n3"><div>)</div></div>
-        <div class="number n4"><div>(</div></div>
+        <div class="brand-name">0</div>
+        <div class="number n2"><div>12</div></div>
+        <div class="number n3"><div>11</div></div>
+        <div class="number n4"><div>10</div></div>
         <div class="number n5"><div>9</div></div>
         <div class="number n6"><div>8</div></div>
         <div class="number n7"><div>Ƶ</div></div>
         <div class="number n8"><div>6</div></div>
         <div class="number n9"><div>5</div></div>
-        <div class="number n10"><div>)</div></div>
-        <div class="number n11"><div>(</div></div>
-        <div class="number n12"><div>🦋</div></div>
+        <div class="number n10"><div>4</div></div>
+        <div class="number n11"><div>3</div></div>
+        <div class="number n12"><div>2</div></div>
         <div class="hand hour" id="hour">
-        <div class="n1">()</div>
+        <div class="n1">1</div>
         </div>
         <div class="hand minute" id="minute"></div>
         <div class="hand second" id="second"></div>
     </div>
-    <div class="tagline">The instinct of Sensation</div>
+    <div class="tagline">The instinct 0f Sensation</div>
 </div>
+<div class="signature">0</div>
 <script>
 const hour = document.getElementById('hour');
+const minute = document.getElementById('minute'); 
+const second = document.getElementById('second');
 const n1 = hour.querySelector('.n1'); 
 function updateClock() {
     const now = new Date();
@@ -258,18 +286,19 @@ function updateClock() {
     n1.style.transform = `translateX(-50%) rotate(${h*30 - 30}deg)`;
     second.style.transform = `translateX(-50%) rotate(${-s*6 + 0}deg)`;
     minute.style.transform = `translateX(-50%) rotate(${-m*6 + 0}deg)`;
-let displayHour = Math.floor(h);
-if (displayHour === 0) displayHour = 12;
-n1.innerText = displayHour;
-if (displayHour === 1) {
-    n1.style.fontWeight = '600';
-    n1.style.letterSpacing = '2px';
-    n1.style.fontSize = '20px';
-} else {
-    n1.style.fontWeight = 'bold';
-    n1.style.letterSpacing = 'normal';
-}
-n1.style.opacity = (displayHour >= 10 || displayHour <= 4) ? 1 : 0;    requestAnimationFrame(updateClock);
+    let displayHour = Math.floor(h);
+    if (displayHour === 0) displayHour = 12;
+    n1.innerText = displayHour;
+    if (displayHour === 1) {
+        n1.style.fontWeight = '600';
+        n1.style.letterSpacing = '2px';
+        n1.style.fontSize = '18px';
+    } else {
+        n1.style.fontWeight = 'bold';
+        n1.style.letterSpacing = 'normal';
+    }
+    
+    requestAnimationFrame(updateClock);
 }
 updateClock();
 </script>
@@ -285,13 +314,13 @@ VANTA.FOG({
     midtoneColor: 0xb2f2bb,
     lowlightColor: 0x0b132b,
     baseColor: 0x000000,
-    blurFactor: 0.14,
-    speed: 0.4,
+    blurFactor: 0.12,
+    speed: 0.3,
     zoom: 0.9
 });
 particlesJS("particles-stars", {
     particles: {
-        number: { value: 72, density: { enable: true, value_area: 800 } },
+        number: { value: 78, density: { enable: true, value_area: 800 } },
         color: { value: "#ffffff" },
         opacity: { 
             value: 0.6, 
@@ -335,8 +364,8 @@ scene.addEventListener('mouseleave', () => {
     targetY = 0;
 });
 function animate3D() {
-    currentX += (targetX - currentX) * 0.07;
-    currentY += (targetY - currentY) * 0.08;
+    currentX += (targetX - currentX) * 0.17;
+    currentY += (targetY - currentY) * 0.14;
 
     clock.style.transform = `
         rotateX(${currentX}deg)
@@ -359,8 +388,8 @@ scene.addEventListener('touchmove', e => {
     const t = e.touches[0];
     const dx = t.clientX - touchX;
     const dy = t.clientY - touchY;
-    targetY = dx * 0.11;
-    targetX = -dy * 0.10;
+    targetY = dx * 0.45;
+    targetX = -dy * 0.45;
 });
 </script>
 </body>
